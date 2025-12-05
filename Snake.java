@@ -1,13 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Player here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Snake extends Actor
-{
+
+public class Snake extends Actor{
+GreenfootSound elephantSound = new GreenfootSound("elephant-352698.mp3");
+
+
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -26,6 +23,7 @@ public class Snake extends Actor
     public void catchCoin()
     {
         ((MyWorld)getWorld()).addScore(1);
+        elephantSound.play();
     }
 }
 
