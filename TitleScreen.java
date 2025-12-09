@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class TitleScreen extends World
 {
     Label titleScreen = new Label("Hungry Elephant", 60); 
+    Label a = new Label("Press <space> to start", 40);
     /**
      * Constructor for objects of class TitleScreen.
      * 
@@ -19,6 +20,10 @@ public class TitleScreen extends World
         super(600, 400, 1); 
         
         addObject(titleScreen, getWidth()/2, getHeight()/2);
+        addObject(a, getWidth()/2, 100);
+        GreenfootImage bg = new GreenfootImage("下载.jpg");
+        bg.scale(getWidth(), getHeight());
+        setBackground(bg);
         
     }
     public void act()
